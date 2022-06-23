@@ -1,7 +1,8 @@
-const numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?", "");
+let numberOfFilms;
 
-console.log(numberOfFilms);
-
+while (!(numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "")) || numberOfFilms>10000) {
+    alert('Введите правдоподобные данные!');
+}
 
 const personalMovieDB = {
     count: numberOfFilms,
@@ -11,10 +12,26 @@ const personalMovieDB = {
     private: false
 };
 
-const a = prompt("Один из просмотренных последних фильмов?", "");
-const b = prompt("Один из просмотренных последних фильмов?", "");
+if (personalMovieDB.count < 10) {
+    alert("Просмотрено довольно мало фильмов");
+} else if (10 < personalMovieDB.count < 30) {
+    alert("Вы - классический зритель"); 
+} else if (personalMovieDB.count > 30) {
+    alert("Вы - киноман!"); 
+} else {
+    alert("Произошла ошибка!");
+}
 
-personalMovieDB.movies.a = prompt("Как его оцените?", "");
-personalMovieDB.movies.b = prompt("Как его оцените?", "");
+const a = prompt("Один из просмотренных последних фильмов?", "");
+      b = prompt("Как его оцените?", "");
+      c = prompt("Один из просмотренных последних фильмов?", "");
+      d = prompt("Как его оцените?", "");
+
+for (let i = 0; i < 2; i++){
+
+}
+      
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
 console.log(personalMovieDB.movies);
