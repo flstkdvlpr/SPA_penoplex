@@ -25,21 +25,20 @@ if (personalMovieDB.count < 10) {
 
 let a,b,c,d;
 
-for (let i = 0; i < 1; i++){
+for (let i = 0; i < 2; i++){
     a = prompt("Один из просмотренных последних фильмов?", "");
-    b = prompt("Как его оцените?", "");
-        if (!a || !b) {
-            alert("Что-то заполнено неверно!");
-            continue;
-        }
-        for (let j = 0; j < 1; j++) {
-            c = prompt("Один из просмотренных последних фильмов?", "");
-            d = prompt("Как его оцените?", "");
-        }
+    b = +prompt("Как его оцените?", "");
+
+    if(!a.trim() || a.length > 50 || b > 100) {
+        alert('Введите правдоподобные данные!');
+        i--;
+        continue;
+    }
+
+    personalMovieDB.movies[a] = b;
 
 }
       
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
+
 
 console.log(personalMovieDB.movies);
