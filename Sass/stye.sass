@@ -1,9 +1,27 @@
-title
+@import "var"
+.title
     font-family: Verdana, Arial, Helvetica, sans-serif
 .headers
     padding: 10px
     display: flex
-    justify-content: space-around
+    justify-content: space-between
+
+.fill
+    list-style-type: none
+    li
+        line-height: 24px
+    &_header
+        font-weight: 600
+    &_tel a
+        color: #000
+        text-decoration: none
+        font-weight: 500
+        &:hover
+            color: $main-color
+            text-decoration: dotted
+    &_adr
+        font-size: 12px
+
 .subheader 
     height: 50px
     background-color: #555

@@ -1,0 +1,20 @@
+ul {
+    list-style-type: none;
+    
+}
+
+
+li {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 24px;
+    margin-bottom: 10px;
+    position: relative;
+    
+}
+li:before{ 
+    content: " !!!!";
+    display: block ;
+    position: absolute;
+    background: url('../img/map.png')
+}
