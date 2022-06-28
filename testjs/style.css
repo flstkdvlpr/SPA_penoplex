@@ -1,20 +1,18 @@
-ul {
+.require_list {
     list-style-type: none;
-    
 }
 
-
-li {
-    font-size: 17px;
-    font-weight: 300;
-    line-height: 24px;
-    margin-bottom: 10px;
+.require_list li {
     position: relative;
-    
 }
-li:before{ 
-    content: " !!!!";
-    display: block ;
+
+.require_list li:before {
+    content: '';
+    display: block;
     position: absolute;
-    background: url('../img/map.png')
+    left: -32px;
+    top: 3px;
+    width: 20px;
+    height: 20px;
+    background: url("../testjs/map.png") center center/cover no-repeat; 
 }
