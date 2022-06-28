@@ -1,3 +1,8 @@
+.rook{
+    display: flex;
+    justify-content: space-around
+}
+
 .require_list {
     list-style-type: none;
 }
@@ -14,5 +19,11 @@
     top: 3px;
     width: 20px;
     height: 20px;
-    background: url("../testjs/map.png") center center/cover no-repeat; 
+    background: url("/img/") center center/cover no-repeat; 
 }
+.test {
+    height: 200px;
+    background-color: #f6f6f7;
+    display: flex;
+    justify-content: space-around;
+}   

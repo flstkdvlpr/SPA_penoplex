@@ -4,20 +4,21 @@
 .headers
     padding: 10px
     display: flex
-    justify-content: space-between
+    justify-content: space-around
 
 .fill
     list-style-type: none
-.fill li
+    li
     line-height: 24px
     position: relative
     &::before
         content: ''
         display: block
         position: absolute
-        left: -22px
-        width: 20px
-        height: 20px
+        top: 5px
+        left: 11px
+        width: 15px
+        height: 15px
         background: url("../testjs/map.png") center center/cover no-repeat
     &_header
         font-weight: 700
@@ -47,3 +48,20 @@
         margin: 0 auto
         float: none
         margin-bottom: 10px
+footer
+    height: 200px
+    background-color: #f6f6f7
+.footer_menu
+    display: flex
+    justify-content: space-around
+    ul
+        list-style-type: none
+        li:first-child
+            font-weight: 700
+            padding-bottom: 10px
+            padding-top: 20px
+        li
+            padding-bottom: 5px
+            a
+                text-decoration: none 
+                color: black
