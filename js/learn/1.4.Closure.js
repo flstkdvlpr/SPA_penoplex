@@ -36,7 +36,7 @@ function f(){
     console.log('SayHi');
 }
 
-console.log(f.surname);
+console.log("a" > "b");
 
 
 //******************* */
