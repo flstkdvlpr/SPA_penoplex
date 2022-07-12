@@ -20,7 +20,7 @@ nav {
 }
 
 .house {
-  min-height: 550px;
+  min-height: 600px;
   background: url("/img/house2.3.jpg") center center/cover no-repeat;
   position: relative;
 }
@@ -28,18 +28,25 @@ nav {
   display: flex;
   justify-content: space-evenly;
 }
+.house_img_line1_img1 {
+  padding-top: 5px;
+}
 .house_img_line1_img2 {
-  padding-left: 40px;
+  padding: 10px 0 0 60px;
 }
 .house_img_line2 {
   display: flex;
   justify-content: space-evenly;
 }
-.house_img_line2_img1 {
-  padding-left: 12px;
-}
 .house_img_line2_img2 {
-  padding: 15px 0 0 75px;
+  padding-top: 30px;
+}
+.house_img_line3 {
+  display: flex;
+  justify-content: space-evenly;
+}
+.house_img_line3_img1 {
+  padding-left: 50px;
 }
 
 .menu {
