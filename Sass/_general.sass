@@ -70,13 +70,18 @@ h1, h2
     background: url("/img/bg_h.png") center center/cover no-repeat
     height: 40px
     margin: 15px auto
-
+.wrapper_card
+    &:hover
+        color: $orange
 .card
     margin: 0 auto
     float: none
     margin-bottom: 10px
+    &-img-top
+        padding: 12px
     &-title
         text-align: center
+        font-weight: 700
     &-text
         margin-bottom: 5px
     &-price
@@ -90,10 +95,16 @@ h1, h2
     &-link
         font-size: 14px
         text-decoration: none
+        padding-left: 12px
+
     .btn
         width: 120px
         height: 40px
-        margin-left: 20px
+        margin: 20px 0 0 20px 
+        background-color: $orange
+        border: none
+        font-weight: 500
+
 footer
     position: relative
     height: 200px
