@@ -48,7 +48,17 @@ nav {
 .house_img_line3_img1 {
   padding-left: 50px;
 }
-
+.house_img_line4 {
+  display: flex;
+  justify-content: space-evenly;
+}
+.house_img_line4_img1 {
+  transform: translate(-80%, -30%);
+}
+.house_img_line5 {
+  display: flex;
+  justify-content: space-evenly;
+}
 .menu {
   display: flex;
   justify-content: space-between;
@@ -84,6 +94,31 @@ h1, h2 {
   margin: 0 auto;
   float: none;
   margin-bottom: 10px;
+}
+.card-title {
+  text-align: center;
+}
+.card-text {
+  margin-bottom: 5px;
+}
+.card-price {
+  text-decoration: none;
+  margin: 10px;
+  font-size: 20px;
+  color: black;
+  font-weight: 750;
+}
+.card-price:hover {
+  color: black;
+}
+.card-link {
+  font-size: 14px;
+  text-decoration: none;
+}
+.card .btn {
+  width: 120px;
+  height: 40px;
+  margin-left: 20px;
 }
 
 footer {
