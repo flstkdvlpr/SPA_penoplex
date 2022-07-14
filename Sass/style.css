@@ -90,10 +90,6 @@ h1, h2 {
   margin: 15px auto;
 }
 
-.wrapper_card:hover {
-  color: #EF7F1B;
-}
-
 .card {
   margin: 0 auto;
   float: none;
