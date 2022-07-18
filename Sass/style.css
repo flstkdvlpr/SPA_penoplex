@@ -103,6 +103,10 @@ h1, h2 {
   float: none;
   margin-bottom: 10px;
 }
+.card-orders {
+  display: flex;
+  justify-content: space-around;
+}
 .card-img-top {
   padding: 12px;
 }
@@ -113,20 +117,23 @@ h1, h2 {
 .card-text {
   margin-bottom: 5px;
 }
+.card-char {
+  font-weight: 400;
+  padding-top: 5px;
+  text-decoration: underline;
+  color: #0d6efd;
+  cursor: pointer;
+}
 .card-price {
   text-decoration: none;
-  margin: 10px;
+  margin-top: 25px;
   font-size: 20px;
   color: black;
   font-weight: 750;
+  cursor: pointer;
 }
 .card-price:hover {
   color: black;
-}
-.card-link {
-  font-size: 14px;
-  text-decoration: none;
-  padding-left: 12px;
 }
 .card .btn {
   width: 120px;
