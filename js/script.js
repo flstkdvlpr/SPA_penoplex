@@ -27,7 +27,9 @@ window.addEventListener('DOMContentLoaded', ()=>{
         let self = cardBody[i];
         self.addEventListener('click',(event)=>{
             event.preventDefault();
-            console.log('click');
+            if (event.target && event.target.dataset.value == 'speclink'){
+                showSpecification();
+            }
         });
     }
 
