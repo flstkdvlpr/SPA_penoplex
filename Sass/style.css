@@ -1,3 +1,10 @@
+.house_img_line5_img1:hover, .house_img_line4_img1:hover, .house_img_line3_img2:hover, .house_img_line3_img1:hover, .house_img_line2_img2:hover, .house_img_line2_img1:hover, .house_img_line1_img2:hover, .house_img_line1_img1:hover {
+  cursor: pointer;
+  background-color: rgba(255, 0, 0, 0.1);
+  border-radius: 100%;
+  background-size: cover;
+}
+
 .show {
   display: block;
 }
@@ -37,15 +44,10 @@ nav {
   justify-content: space-evenly;
 }
 .house_img_line1_img1 {
-  padding-top: 5px;
-}
-.house_img_line1_img1:hover {
-  display: block;
-  padding-top: 5px;
-  cursor: pointer;
+  margin-top: 5px;
 }
 .house_img_line1_img2 {
-  padding: 10px 0 0 60px;
+  margin: 10px 0 0 60px;
 }
 .house_img_line2 {
   display: flex;
@@ -56,10 +58,11 @@ nav {
 }
 .house_img_line3 {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 .house_img_line3_img1 {
-  padding-left: 50px;
+  display: block;
+  margin: 0 auto;
 }
 .house_img_line4 {
   display: flex;

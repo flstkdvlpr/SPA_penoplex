@@ -26,33 +26,47 @@ nav
         display: flex
         justify-content: space-evenly
         &_img1
-            padding-top: 5px
+            margin-top: 5px
             &:hover
-                display: block
-                padding-top: 5px
-                cursor: pointer
-                
+                @extend %hover-orange
         &_img2
-            padding: 10px 0 0 60px
+            margin: 10px 0 0 60px
+            &:hover
+                @extend %hover-orange
     &_img_line2
         display: flex
         justify-content: space-evenly
+        &_img1
+            &:hover
+                @extend %hover-orange                    
         &_img2
             padding-top: 30px
+            &:hover
+                @extend %hover-orange            
     &_img_line3
         display: flex
-        justify-content: space-evenly
+        justify-content: space-around 
         &_img1
-            padding-left: 50px
+            display: block
+            margin: 0 auto
+            &:hover
+                @extend %hover-orange
+        &_img2
+            &:hover
+                @extend %hover-orange            
     &_img_line4
         display: flex
         justify-content: space-evenly
         &_img1
             transform: translate(-80%, -30%)
+            &:hover
+                @extend %hover-orange
     &_img_line5
         display: flex
         justify-content: space-evenly
-        &_img1    
+        &_img1
+            &:hover
+                @extend %hover-orange    
 .menu
     display: flex
     justify-content: space-between
