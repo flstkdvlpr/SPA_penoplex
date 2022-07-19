@@ -39,6 +39,11 @@ nav {
 .house_img_line1_img1 {
   padding-top: 5px;
 }
+.house_img_line1_img1:hover {
+  display: block;
+  padding-top: 5px;
+  cursor: pointer;
+}
 .house_img_line1_img2 {
   padding: 10px 0 0 60px;
 }
