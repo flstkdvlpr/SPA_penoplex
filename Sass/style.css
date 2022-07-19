@@ -43,6 +43,10 @@ nav {
   display: flex;
   justify-content: space-evenly;
 }
+.house_img_line1_zalupa {
+  display: flex;
+  justify-content: space-evenly;
+}
 .house_img_line1_img1 {
   margin-top: 5px;
 }
@@ -54,7 +58,7 @@ nav {
   justify-content: space-evenly;
 }
 .house_img_line2_img2 {
-  padding-top: 30px;
+  margin-top: 30px;
 }
 .house_img_line3 {
   display: flex;
