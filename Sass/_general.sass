@@ -22,14 +22,17 @@ nav
     min-height: 600px
     background: url("/img/house2.3.jpg") center center/cover no-repeat
     position: relative
-    &_img_line1 
+    &_img_line1
         display: flex
         justify-content: space-evenly
-        &_zalupa
+        &_block
             display: flex
             justify-content: space-evenly
+        &_text
+            @extend %text-circle-right
         &_img1
             margin-top: 5px
+            width: 130px
             &:hover
                 @extend %hover-orange
         &_img2
@@ -68,6 +71,7 @@ nav
         display: flex
         justify-content: space-evenly
         &_img1
+            margin-left: 20px
             &:hover
                 @extend %hover-orange    
 .menu
