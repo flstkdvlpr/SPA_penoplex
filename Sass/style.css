@@ -60,6 +60,14 @@ nav {
   display: flex;
   justify-content: space-evenly;
 }
+.house_img_line1_block2 {
+  display: flex;
+}
+.house_img_line1_text2 {
+  font-weight: 600;
+  margin-top: 42px;
+  font-style: 15px;
+}
 .house_img_line1_img1 {
   margin-top: 5px;
   width: 130px;
