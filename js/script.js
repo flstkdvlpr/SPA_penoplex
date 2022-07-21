@@ -40,16 +40,33 @@ window.addEventListener('DOMContentLoaded', ()=>{
     hideItemSpecification();
 
 
-    for (let i = 0; i < cardBody.length; i++){
-        cardBody[i].addEventListener('click',(event)=>{
-            event.preventDefault();
-            if (event.target && event.target.dataset.value == 'speclink'){
-                showItemSpecification();
-                hideItemInformation();
+
+
+    cardBody.forEach(item =>{
+        item.addEventListener('click', (e)=>{
+            e.preventDefault();
+            if(e.target && e.target.dataset.value == 'speclink'){
+
             }
         });
-    }
+    });
 
-    
 
+/*     cardBody.forEach(item =>{
+        item.addEventListener('click', (e)=>{
+            e.preventDefault();
+            if(e.target && e.target.dataset.value == 'speclink'){
+                cardchar.forEach((item)=>{
+                    if(item == e.target){
+                        spicificationSide2.forEach(item =>{
+                            if(e.target == item){
+                                item.classList.add('show');
+                                item.classList.remove('hide');
+                            }
+                        });
+                    }
+                });
+            }
+        });
+    }); */
 });
