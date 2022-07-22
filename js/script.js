@@ -5,35 +5,13 @@ window.addEventListener('DOMContentLoaded', ()=>{
         cardchar = document.querySelectorAll('.card-char'),
         card = document.querySelectorAll('.card');
 
-    function hideItemSpecification(){
-        spicificationSide2.forEach(item => {
+    function hideAllItems(){
+        card.forEach(item =>{
             item.classList.add('hide');
-            item.classList.remove('show');
         });
     }
 
-    function showItemSpecification(){
-        spicificationSide2.forEach(item =>{
-            item.classList.add('show');
-            item.classList.remove('hide');
-        });
-    }
-
-
-    function hideItemInformation(){
-        spicificationSide1.forEach(item =>{
-            item.classList.add('hide');
-            item.classList.remove('show');
-        });
-    }
-
-    function showItemInformation(){
-        spicificationSide1.forEach(item =>{
-            item.classList.add('show');
-            item.classList.remove('hide');
-        });
-    }
-
+    //hideAllItems();
 
     card.forEach(item =>{
         item.addEventListener('click', (e)=>{
@@ -56,6 +34,8 @@ window.addEventListener('DOMContentLoaded', ()=>{
             }
         });
     }); 
+
+    
 
 
 /*     cardBody.forEach(item =>{
