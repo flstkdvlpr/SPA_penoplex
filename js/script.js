@@ -3,8 +3,6 @@ window.addEventListener('DOMContentLoaded', ()=>{
     const links = document.querySelectorAll(".card-link"),
         cardBody = document.querySelectorAll('.card-body'),
         cardchar = document.querySelectorAll('.card-char'),
-        spicificationSide1 = document.querySelectorAll('.card-side-1'),
-        spicificationSide2 = document.querySelectorAll('.card-side-2'),
         card = document.querySelectorAll('.card');
 
     function hideItemSpecification(){
@@ -36,20 +34,28 @@ window.addEventListener('DOMContentLoaded', ()=>{
         });
     }
 
-  
-    hideItemSpecification();
 
-
-
-
-    cardBody.forEach(item =>{
+    card.forEach(item =>{
         item.addEventListener('click', (e)=>{
             e.preventDefault();
             if(e.target && e.target.dataset.value == 'speclink'){
-
+                item.childNodes[3].classList.remove('hide');
+                console.log(item.childNodes[1].classList.add('hide'));
+                console.log(item.childNodes[1]);
+                console.log(item.childNodes[3]);
             }
         });
-    });
+    }); 
+
+    card.forEach(item =>{
+        item.addEventListener('click', (e)=>{
+            e.preventDefault();
+            if(e.target && e.target.dataset.value == 'specendlink'){
+                item.childNodes[1].classList.remove('hide');
+                item.childNodes[3].classList.add('hide');
+            }
+        });
+    }); 
 
 
 /*     cardBody.forEach(item =>{
