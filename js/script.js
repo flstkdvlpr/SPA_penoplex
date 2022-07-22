@@ -1,9 +1,17 @@
 window.addEventListener('DOMContentLoaded', ()=>{
 
-    const links = document.querySelectorAll(".card-link"),
-        cardBody = document.querySelectorAll('.card-body'),
-        cardchar = document.querySelectorAll('.card-char'),
+    const house = document.querySelector('.house'),
         card = document.querySelectorAll('.card');
+
+
+    house.addEventListener('click', (e)=>{
+        const target = e.target;
+        if(target && target.dataset.item == 'roofpitched'){
+            //hideAllItems();
+            //console.log('click');
+        }
+    });
+
 
     function hideAllItems(){
         card.forEach(item =>{
@@ -35,24 +43,4 @@ window.addEventListener('DOMContentLoaded', ()=>{
         });
     }); 
 
-    
-
-
-/*     cardBody.forEach(item =>{
-        item.addEventListener('click', (e)=>{
-            e.preventDefault();
-            if(e.target && e.target.dataset.value == 'speclink'){
-                cardchar.forEach((item)=>{
-                    if(item == e.target){
-                        spicificationSide2.forEach(item =>{
-                            if(e.target == item){
-                                item.classList.add('show');
-                                item.classList.remove('hide');
-                            }
-                        });
-                    }
-                });
-            }
-        });
-    }); */
 });
