@@ -89,21 +89,43 @@ nav
         &_img1
             &:hover
                 @extend %hover-orange
+        &_block2
+            display: flex
+            justify-content: flex-start
         &_img2
             &:hover
-                @extend %hover-orange            
+                @extend %hover-orange  
+        &_text2
+            @extend %text-circle         
     &_img_line4
         display: flex
         justify-content: space-evenly
+        &_block1
+            display: flex
+            justify-content: flex-start
         &_img1
-            transform: translate(-80%, -30%)
+            transform: translate(-25%, -20%)
             &:hover
                 @extend %hover-orange
+        &_text1
+            margin-top: 15px
+            font-weight: 400
+            font-size: 18px
+            padding-right: 18px
+            line-height: 17px
+            transform: translate(-15%, 0%)
+            text-shadow: 1px 1px 2px rgb(0,0,0,0.4)
+            &:hover
+                cursor: pointer
     &_img_line5
         display: flex
         justify-content: space-evenly
+        &_block1
+            display: flex
+        &_text1
+            @extend %text-circle
+            padding-right: 7px
         &_img1
-            margin-left: 20px
             &:hover
                 @extend %hover-orange    
 .menu
