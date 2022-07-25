@@ -33,9 +33,7 @@ nav
         &_block2
             display: flex
         &_text2
-            font-weight: 600
-            margin-top: 42px
-            font-style: 15px
+            @extend %text-circle
         &_img1
             margin-top: 5px
             width: 118px
@@ -48,19 +46,47 @@ nav
     &_img_line2
         display: flex
         justify-content: space-evenly
+        &_block
+            display: flex
+            justify-content: flex-start
         &_img1
+            height: 100px
             &:hover
-                @extend %hover-orange                    
+                @extend %hover-orange
+        &_text1
+            @extend %text-circle-right
+        &_block2
+            display: flex                
         &_img2
             margin-top: 30px
             &:hover
-                @extend %hover-orange            
+                @extend %hover-orange 
+        &_text2
+            text-align: center
+            margin-top: 65px
+            font-weight: 400
+            padding-left: 5px
+            font-size: 18px
+            line-height: 17px
+            text-shadow: 1px 1px 2px rgb(0,0,0,0.4)
+            &:hover
+                cursor: pointer           
     &_img_line3
         display: flex
-        justify-content: space-around 
+        justify-content: space-around
+        &_block1
+            display: flex
+            justify-content: flex-start
+        &_text1
+            margin-top: 35px
+            padding-right: 5px
+            font-weight: 400
+            font-size: 18px
+            line-height: 17px
+            text-shadow: 1px 1px 2px rgb(0,0,0,0.4)
+            &:hover
+                cursor: pointer
         &_img1
-            display: block
-            margin: 0 auto
             &:hover
                 @extend %hover-orange
         &_img2
@@ -95,7 +121,6 @@ nav
             color: #e6e6e6
     &_item
         padding-right: 28px
-        &:last-child
 h1, h2
     font-weight: 600
     text-align: center
@@ -106,6 +131,12 @@ h1, h2
     background: url("/img/bg_h.png") center center/cover no-repeat
     height: 40px
     margin: 15px auto
+    a
+        text-decoration: none
+        color: #ffffff
+        pointer-events: none
+        cursor: default
+
 .card
     margin: 0 auto
     float: none

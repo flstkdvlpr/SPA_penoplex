@@ -8,7 +8,8 @@ window.addEventListener('DOMContentLoaded', ()=>{
         const target = e.target;
         if(target && target.dataset.item == 'roofpitched'){
             //hideAllItems();
-            //console.log('click');
+            parent.document.location.href = "http://127.0.0.1:5500/index.html#catalog";
+            console.log('click');
         }
     });
 
