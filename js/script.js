@@ -27,9 +27,8 @@ window.addEventListener('DOMContentLoaded', ()=>{
             e.preventDefault();
             if(e.target && e.target.dataset.value == 'speclink'){
                 item.childNodes[3].classList.remove('hide');
-                console.log(item.childNodes[1].classList.add('hide'));
-                console.log(item.childNodes[1]);
-                console.log(item.childNodes[3]);
+                item.childNodes[1].classList.add('hide');
+
             }
         });
     }); 
@@ -40,6 +39,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
             if(e.target && e.target.dataset.value == 'specendlink'){
                 item.childNodes[1].classList.remove('hide');
                 item.childNodes[3].classList.add('hide');
+                console.log(item.childNodes[3]);
             }
         });
     }); 
