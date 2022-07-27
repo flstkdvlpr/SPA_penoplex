@@ -45,21 +45,22 @@ window.addEventListener('DOMContentLoaded', ()=>{
         });
     }); 
 
-    /* class MenuCardSide1{
-        constructor(side, img, title, text1, text2, text3, price, parentSelector){
-            this.side = side;
+    class MenuCardSide1{
+        constructor(img, title, text1, text2, text3, price, parentSelector, ...classes){
             this.img = img;
             this.title = title;
             this.text1 = text1;
             this.text2 = text2;
             this.text3 = text3;
             this.price = price;
+            this.classes = classes;
             this.parent = document.querySelector(parentSelector);
         }
 
         render(){
             const element = document.createElement('div');
-            element.innerHTML = `<div class="card-side-1">
+            this.classes.forEach(className => element.classList.add(className))
+            element.innerHTML = `
             <img src=${this.img} class="card-img-top" alt="...">
             <div class="card-body">
             <h5 class="card-title">${this.title}</h5>
@@ -72,16 +73,14 @@ window.addEventListener('DOMContentLoaded', ()=>{
                     <div class="btn btn-primary">Купить</div>
                 </div>   
             </div>
-        </div>
             `;
 
-            this.parent.append(card);
+            this.parent.append(element);
         }
     }
 
-    class MenuCardSide2{
-        constructor(side, text1, text2, text3, text4, text5, text6, text7, parentSelector){
-            this.side = side;
+     class MenuCardSide2{
+        constructor(text1, text2, text3, text4, text5, text6, text7, parentSelector,...classes){
             this.text1 = text1;
             this.text2 = text2;
             this.text3 = text3;
@@ -89,12 +88,14 @@ window.addEventListener('DOMContentLoaded', ()=>{
             this.text5 = text5;
             this.text6 = text6;
             this.text7 = text7;
+            this.classes = classes;
             this.parent = document.querySelector(parentSelector);
         }
 
         render(){
             const element = document.createElement('div');
-            element.innerHTML = `<div class="card-side-${2}">
+            this.classes.forEach(className => element.classList.add(className))
+            element.innerHTML = `<div class="card-side-2">
             <div class="card-body">
                 <h5 class="card-title" data-value="spectitle">Характеристики</h5>
                 <p class="card-text">${this.text1}</p>
@@ -121,18 +122,17 @@ window.addEventListener('DOMContentLoaded', ()=>{
     }
 
     new MenuCardSide1(
-        1,
         "/img/osnova.jpeg",
         "Пеноплэкс Основа!®",
         "Теплоизоляция внешних и внутренних ограждающих конструкций.",
         "В продаже имеется материал с толщиной листа 20, 30, 40, 50, 100 мм.",
         "Область применения: стены, цоколи и первые этажи конструкций.",
         "240 ₽/лист",
-        ".card"
+        ".card",
+        "card-side-1"
     ).render();
 
     new MenuCardSide2(
-        2,
         "Производятся по ТУ 5767-006-54349294-2014",
         "Водопоглощение за 24 часа: 0,4%",
         "Группа горючести по 123-ФЗ: Г4",
@@ -140,7 +140,8 @@ window.addEventListener('DOMContentLoaded', ()=>{
         "Звукоизоляция перегородки: 41 дБ",
         "Плотность: 27-35 кг/м3",
         "Модуль упругости: 17 МПа",
-        ".card"
-    ).render(); */
+        ".card",
+        "card-side-2 hide"
+    ).render();
 
 });
