@@ -27,8 +27,8 @@ window.addEventListener('DOMContentLoaded', ()=>{
             e.preventDefault();
             if(e.target && e.target.dataset.value == 'speclink'){
                 console.log(item.childNodes.childNodes);
-                //item.childNodes[3].classList.remove('hide');
-                //item.childNodes[1].classList.add('hide');
+                item.childNodes[3].classList.remove('hide');
+                item.childNodes[1].classList.add('hide');
 
             }
         });
@@ -38,14 +38,14 @@ window.addEventListener('DOMContentLoaded', ()=>{
         item.addEventListener('click', (e)=>{
             e.preventDefault();
             if(e.target && e.target.dataset.value == 'specendlink'){
-                //item.childNodes[1].classList.remove('hide');
-                //item.childNodes[3].classList.add('hide');
-                //console.log(item.childNodes[3]);
+                item.childNodes[1].classList.remove('hide');
+                item.childNodes[3].classList.add('hide');
+                console.log(item.childNodes[3]);
             }
         });
     }); 
 
-    class MenuCardSide1{
+    /* class MenuCardSide1{
         constructor(side, img, title, text1, text2, text3, price, parentSelector){
             this.side = side;
             this.img = img;
@@ -141,6 +141,6 @@ window.addEventListener('DOMContentLoaded', ()=>{
         "Плотность: 27-35 кг/м3",
         "Модуль упругости: 17 МПа",
         ".card"
-    ).render();
+    ).render(); */
 
 });
