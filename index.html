@@ -380,6 +380,34 @@
                         Мы доставим заказ после согласования с вами: состава заказа, адреса доставки, даты 
                         доставки, контактной информации и получения предоплаты в размере 100%. 
                     </p>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <form>
+                                <div class="mb-3">
+                                  <label for="recipient-name" class="col-form-label">Recipient:</label>
+                                  <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                                <div class="mb-3">
+                                  <label for="message-text" class="col-form-label">Message:</label>
+                                  <textarea class="form-control" id="message-text"></textarea>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary">Send message</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    
                     <p>
                         Оплата производится только на основании счёта, выставленного менеджером компании. 
                         Счёт будет выставлен после подтверждения наличия товара и согласования условия доставки.
@@ -391,19 +419,7 @@
             </div>
         </section>
     </main>
-    <div class="modal">
-        <div class="modal_dialog">
-            <div class="modal_content">
-                <form action="#">
-                    <div class="modal_close">&times;</div>
-                    <div class="modal_title">Мы свяжемся с вами как можно быстрее!</div>
-                    <input required placeholder="Ваше имя" name="name" type="text" class="modal_input">
-                    <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal_input">
-                    <button class="btn btn_dark btn_min">Перезвонить мне</button>
-                </form>
-            </div>
-        </div>
-    </div>
+
     <footer>
         <div class="container">
             <div class="row">
@@ -424,7 +440,19 @@
             </div>
         </div>
     </footer>
-
+    <div class="modal">
+        <div class="modal__dialog">
+            <div class="modal__content">
+                <form action="#">
+                    <div class="modal__close" data-close>&times;</div>
+                    <div class="modal__title">Мы свяжемся с вами как можно быстрее!</div>
+                    <input required placeholder="Ваше имя" name="name" type="text" class="modal__input">
+                    <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal__input">
+                    <button class="btn btn_dark btn_min">Перезвонить мне</button>
+                </form>
+            </div>
+        </div>
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,7 +1,13 @@
 window.addEventListener('DOMContentLoaded', ()=>{
 
     const house = document.querySelector('.house'),
-        card = document.querySelectorAll('.card');
+        card = document.querySelectorAll('.card'),
+        modal = document.querySelector('.modal'),
+        cardOrders = document.querySelectorAll('.card-orders');
+
+
+        console.log(cardOrders[1].childNodes[3]);
+    
 
 
  /*    house.addEventListener('click', (e)=>{
@@ -44,6 +50,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
             }
         });
     }); 
+
 
     class MenuCardSide1{
         constructor(img, title, text1, text2, text3, price, parentSelector, ...classes){
