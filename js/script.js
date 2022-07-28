@@ -59,7 +59,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
         render(){
             const element = document.createElement('div');
-            this.classes.forEach(className => element.classList.add(className))
+            this.classes.forEach(className => element.classList.add(className));
             element.innerHTML = `
             <img src=${this.img} class="card-img-top" alt="...">
             <div class="card-body">
@@ -94,7 +94,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
         render(){
             const element = document.createElement('div');
-            this.classes.forEach(className => element.classList.add(className))
+            this.classes.forEach(className => element.classList.add(className));
             element.innerHTML = `<div class="card-side-2">
             <div class="card-body">
                 <h5 class="card-title" data-value="spectitle">Характеристики</h5>
@@ -153,10 +153,12 @@ window.addEventListener('DOMContentLoaded', ()=>{
         request.open('GET', 'js/current.json'); //настройки для запроса GET/POST, URL, SYNC/ASYNC, login, pass
         request.setRequestHeader('Content-type', 'application/json; charset=utf-8' );
         request.send();
-        request.addEventListener('readystatechange', ()=>{
-            if(request.readyState === 4 && request.status == 200){
+        request.addEventListener('load', ()=>{ //readystatechange
+            if(request.status == 200){
                 const res = JSON.parse(request.response);
                 inputUsd.value = (inputRub.value/res.current.usd).toFixed(2);
+            } else {
+                inputUsd.value = 'Что-то пошло не так';
             }
         });
     });
