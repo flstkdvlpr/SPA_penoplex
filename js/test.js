@@ -1,8 +1,17 @@
 console.log('click');
 
-const rests = function(a, b, ...rest){
+const people = {
+    name: "John",
+    tel: '+7925485552',
+    parents: {
+        mom: 'Olga',
+        father: 'Andrew'
+    }
+};
 
-    console.log(a, b, rest);
-}
+JSON.stringify(people);
+console.log(JSON.parse(JSON.stringify(people)));
 
-rests('fff', 3, 'teeed', true)
+const clonePeople = JSON.parse(JSON.stringify(people));
+clonePeople.parents.mom = 'Lora';
+console.log(clonePeople);

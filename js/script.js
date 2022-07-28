@@ -141,7 +141,8 @@ window.addEventListener('DOMContentLoaded', ()=>{
         "Плотность: 27-35 кг/м3",
         "Модуль упругости: 17 МПа",
         ".card",
-        "card-side-2 hide"
+        "card-side-2",
+        "hide"
     ).render();
 
 });
