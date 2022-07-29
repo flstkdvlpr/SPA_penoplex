@@ -93,6 +93,40 @@
                     </div>
                     <div class="col">       
                         <div class="card" style="width: 20rem;">
+                            <div class="card-side-1">
+                                <img src="/img/osnova.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title">Пеноплэкс Основа®</h5>
+                                <p class="card-text">Теплоизоляция внешних и внутренних ограждающих конструкций. </p>
+                                <p class="card-text">В продаже имеется материал с толщиной листа 20, 30, 40, 50, 100 мм.</p>
+                                <p class="card-text">Область применения: стены, цоколи и первые этажи конструкций.</p>
+                                <div class="card-char" data-value="speclink">Характеристики</div>
+                                    <div class="card-orders">
+                                        <div class="card-price">240 ₽/лист</div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Купить</button>
+                                    </div>   
+                                </div>
+                            </div>
+                            <div class="card-side-2 hide">
+                                <div class="card-body">
+                                    <h5 class="card-title" data-value="spectitle">Характеристики</h5>
+                                    <p class="card-text">Производятся по ТУ 5767-006-54349294-2014</p>
+                                    <p class="card-text">Водопоглощение за 24 часа: 0,4% </p>
+                                    <p class="card-text">Группа горючести по 123-ФЗ: Г4</p>
+                                    <p class="card-text">Коэффициент теплопроводности: 0,034 Вт/(м×°К)</p>
+                                    <p class="card-text">Звукоизоляция перегородки: 41 дБ</p>
+                                    <p class="card-text">Плотность: 27-35 кг/м3</p>
+                                    <p class="card-text">Модуль упругости: 17 МПа</p>
+                                      <ul>
+                                          <li>низкая теплопроводность</li>
+                                          <li>нулевое водопоглощение (однородная структура из герметичных ячеек);</li>
+                                          <li>высокая прочность на сжатие и изгиб;</li>
+                                          <li>долговечность;</li>
+                                          <li>экологичность;</li>
+                                      </ul>
+                                      <div class="card-char" data-value="specendlink">Назад</div>
+                                  </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col">
@@ -107,7 +141,7 @@
                                     <div class="card-char" data-value="speclink">Характеристики</div>
                                         <div class="card-orders">
                                             <div class="card-price">240 ₽/лист</div>
-                                            <div class="btn btn-primary">Купить</div>
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Купить</button>
                                         </div>
                                 </div>
                             </div>
@@ -145,7 +179,7 @@
                                 <div class="card-char" data-value="speclink">Характеристики</div>
                                     <div class="card-orders">
                                         <div class="card-price">240 ₽/лист</div>
-                                        <div class="btn btn-primary">Купить</div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Купить</button>
                                     </div>
                                 </div>
                             </div>
@@ -183,7 +217,7 @@
                                 <div class="card-char" data-value="speclink">Характеристики</div>
                                     <div class="card-orders">
                                         <div class="card-price">240 ₽/лист</div>
-                                        <div class="btn btn-primary">Купить</div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Купить</button>
                                     </div>
                                 </div>
                             </div>
@@ -221,7 +255,7 @@
                                 <div class="card-char" data-value="speclink">Характеристики</div>
                                     <div class="card-orders">
                                         <div class="card-price">240 ₽/лист</div>
-                                        <div class="btn btn-primary">Купить</div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Купить</button>
                                     </div>
                                 </div>
                             </div>
@@ -259,7 +293,7 @@
                                 <div class="card-char" data-value="speclink">Характеристики</div>
                                     <div class="card-orders">
                                         <div class="card-price">240 ₽/лист</div>
-                                        <div class="btn btn-primary">Купить</div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Купить</button>
                                     </div>
                                 </div>
                             </div>
@@ -440,19 +474,32 @@
             </div>
         </div>
     </footer>
-    <div class="modal">
-        <div class="modal__dialog">
-            <div class="modal__content">
-                <form action="#">
-                    <div class="modal__close" data-close>&times;</div>
-                    <div class="modal__title">Мы свяжемся с вами как можно быстрее!</div>
-                    <input required placeholder="Ваше имя" name="name" type="text" class="modal__input">
-                    <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal__input">
-                    <button class="btn btn_dark btn_min">Перезвонить мне</button>
-                </form>
-            </div>
-        </div>
+
+    
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Новое сообщение</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Получатель:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary">Отправить сообщение</button>
+      </div>
     </div>
+  </div>
+</div>
+    
     <script src="js/script.js"></script>
 </body>
 </html>
