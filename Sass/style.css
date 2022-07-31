@@ -284,16 +284,18 @@ footer {
   width: 320px;
   border: 1px solid #ced4da;
   border-radius: 5px;
-  align-items: center;
 }
 .grid_elem_title {
   font-size: 1.25rem;
   font-weight: 700;
   padding: 20px 0 10px 20px;
 }
+.grid_elem_descr {
+  padding: 0 0 10px 20px;
+}
 .grid_elem_img {
-  margin-left: 40px;
-  display: block;
+  display: inline-block;
+  float: left;
 }
 .grid_elem_url a {
   text-decoration: none;
