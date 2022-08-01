@@ -1,3 +1,8 @@
+* 
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    
 .title
     font-family: Verdana, Arial, Helvetica, sans-serif
 
@@ -174,10 +179,10 @@ h1, h2
     &-text
         margin-bottom: 5px
     &-char
-        font-weight: 400
-        padding-top: 5px
-        text-decoration: underline
-        color: #0d6efd
+        text-decoration: none
+        color: grey
+        font-size: 15px
+        font-weight: 500
         cursor: pointer
     &-price
         text-decoration: none
@@ -219,9 +224,11 @@ footer
 .grid-container
     display: grid
     padding-left: 10px
-    place-items: center
+    justify-items: center
+    align-items: center
+    gap: 20px
     grid-template-columns: repeat(auto-fill, minmax(300px, 400px))
-    grid-template-rows: repeat(2, minmax(100px, auto))
+    grid-template-rows: repeat(2, minmax(200px, auto))
     grid-auto-rows: minmax(100px, auto)
 
 .grid_elem
@@ -235,27 +242,17 @@ footer
         font-weight: 700
         padding: 20px 0 10px 20px
     &_descr
-        padding: 0 0 10px 20px
-    &_img
-        display: inline-block
-        float: left
+        padding: 0 10px 10px 20px
+    img
+        margin: 20px 0 0 47px
     &_url
-        a   
+        a
             text-decoration: none
             color: grey
             font-size: 15px
             font-weight: 500
             margin-left: 20px
-        &:after
-            content: ''
-            display: block
-            background: url("/img/arrow-right.svg") center center/cover no-repeat
-            height: 13px
-            margin-left: 5px
-            position: absolute
-            bottom: 36px
-            right: 33px
-            background-size: cover
+
 .modal-footer
     .btn
         width: 120px
