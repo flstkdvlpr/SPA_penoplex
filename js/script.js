@@ -2,12 +2,18 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
     const house = document.querySelector('.house'),
         card = document.querySelectorAll('.card'),
-        buyBtn = document.querySelectorAll('[modal-buy]'),
         modal = document.querySelector('.modal'),
         cardOrders = document.querySelectorAll('.card-orders');
 
-        console.log(modal);
 
+ /*    house.addEventListener('click', (e)=>{
+        const target = e.target;
+        if(target && target.dataset.item == 'roofpitched'){
+            //hideAllItems();
+            parent.document.location.href = "http://127.0.0.1:5500/index.html#catalog";
+            console.log('click');
+        }
+    }); */
 
 
     function hideAllItems(){
@@ -41,11 +47,10 @@ window.addEventListener('DOMContentLoaded', ()=>{
         });
     }); 
 
-
     const inputRub = document.querySelector('#rub'),
           inputUsd = document.querySelector('#usd');
 
-    inputRub.addEventListener('input', ()=>{
+/*     inputRub.addEventListener('input', ()=>{
         const request = new XMLHttpRequest();
         request.open('GET', 'js/current.json'); //настройки для запроса GET/POST, URL, SYNC/ASYNC, login, pass
         request.setRequestHeader('Content-type', 'application/json; charset=utf-8' );
@@ -58,13 +63,21 @@ window.addEventListener('DOMContentLoaded', ()=>{
                 inputUsd.value = 'Что-то пошло не так';
             }
         });
-    });
+    }); */
 
-    buyBtn.forEach(item =>{
-        item.addEventListener('click', ()=>{
-            
-            
-        });
-    });
+    inputRub.addEventListener('input', ()=>{
+        const request = new XMLHttpRequest();
+        request.open('GET', 'js/price.json');
+        request.setRequestHeader('Content-type', 'application/json; charset=utf-8' );
+        request.send();
+        request.addEventListener('load', ()=>{
+            if(request.status == 200){
+                const res = JSON.parse(JSON.stringify(request.response));
+                console.log(res.catalog);
+            } else {
+                inputUsd.value = 'Что-то пошло не так';
+            }
+        })
+    })
 
 });

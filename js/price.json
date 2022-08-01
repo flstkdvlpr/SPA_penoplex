@@ -1,0 +1,15 @@
+{
+    "catalog":{
+        "osnova": {
+            "list": 8,
+            "volume": 0.245,
+            "m3": 7369
+        },
+
+        "fundament": {
+            "list": 7,
+            "volume": 0.246,
+            "m3": 7860
+        }
+    }
+}
