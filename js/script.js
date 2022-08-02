@@ -72,10 +72,8 @@ window.addEventListener('DOMContentLoaded', ()=>{
         request.send();
         request.addEventListener('load', ()=>{
             if(request.status == 200){
-                const res = JSON.parse(JSON.stringify(request.response));
-                console.log(res.catalog);
-            } else {
-                inputUsd.value = 'Что-то пошло не так';
+                const data = JSON.parse(request.response);
+                console.log(data.offers[0].price);
             }
         })
     })
