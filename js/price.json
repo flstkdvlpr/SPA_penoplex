@@ -1,15 +1,21 @@
 {
-    "catalog":{
-        "osnova": {
+    "offers": [
+        {
+            "name": "Пеноплекс Основа",
+            "id": 1,
+            "description": "Описание товара",
+            "price": 7869,
             "list": 8,
-            "volume": 0.245,
-            "m3": 7369
+            "value": 0.2324
         },
 
-        "fundament": {
+        {
+            "name": "Пеноплекс Комфорт",
+            "id": 1,
+            "description": "Описание товара",
+            "price": 7956,
             "list": 7,
-            "volume": 0.246,
-            "m3": 7860
+            "value": 0.2525
         }
-    }
-}
+    ]
+  } 
