@@ -21,42 +21,114 @@ nav
 
 
 .house
-    min-height: 650px
+    min-height: 600px
     background: url("/img/house2.3.jpg") center center/cover no-repeat
-    .grid-container
-        display: grid
-        grid-template-columns: repeat(3, minmax(300px, 400px))
-    .grid-elem-1
-        margin-top: 90px
-        margin-left: 240px
-    .grid-elem-2
-        margin-left: 150px
-    .grid-elem-3
-        margin-right: 130px
-
+    position: relative
     &_img_line1
-        a
-            text-decoration: none
-        &_img_1, &_img_2, &_img_3
-            margin-left: 10px
-
+        display: flex
+        &_block
+            display: flex
+            justify-content: space-evenly
         &_text
+            @extend %text-circle-right
+        &_block2
+            display: flex
+        &_text2
             @extend %text-circle
+        &_img1
+            margin-top: 5px
+            width: 118px
+            &:hover
+                @extend %hover-orange
+        &_img2
+            margin: 10px 0 0 60px
+            &:hover
+                @extend %hover-orange
     &_img_line2
-        a
-            text-decoration: none
-        &_img_1
-            margin-left: 163px
-        &_text
+        display: flex
+        justify-content: space-evenly
+        &_block
+            display: flex
+            justify-content: flex-start
+        &_img1
+            height: 100px
+            &:hover
+                @extend %hover-orange
+        &_text1
+            @extend %text-circle-right
+        &_block2
+            display: flex                
+        &_img2
+            margin-top: 30px
+            &:hover
+                @extend %hover-orange 
+        &_text2
+            text-align: center
+            margin-top: 65px
+            font-weight: 400
+            padding-left: 5px
+            font-size: 18px
+            line-height: 17px
+            text-shadow: 1px 1px 2px rgb(0,0,0,0.4)
+            &:hover
+                cursor: pointer           
+    &_img_line3
+        display: flex
+        justify-content: space-around
+        &_block1
+            display: flex
+            justify-content: flex-start
+        &_text1
+            margin-top: 35px
+            padding-right: 5px
+            font-weight: 400
+            font-size: 18px
+            line-height: 17px
+            text-shadow: 1px 1px 2px rgb(0,0,0,0.4)
+            &:hover
+                cursor: pointer
+        &_img1
+            &:hover
+                @extend %hover-orange
+        &_block2
+            display: flex
+            justify-content: flex-start
+        &_img2
+            &:hover
+                @extend %hover-orange  
+        &_text2
+            @extend %text-circle         
+    &_img_line4
+        display: flex
+        justify-content: space-evenly
+        &_block1
+            display: flex
+            justify-content: flex-start
+        &_img1
+            transform: translate(-25%, -20%)
+            &:hover
+                @extend %hover-orange
+        &_text1
+            margin-top: 15px
+            font-weight: 400
+            font-size: 18px
+            padding-right: 18px
+            line-height: 17px
+            transform: translate(-15%, 0%)
+            text-shadow: 1px 1px 2px rgb(0,0,0,0.4)
+            &:hover
+                cursor: pointer
+    &_img_line5
+        display: flex
+        justify-content: space-evenly
+        &_block1
+            display: flex
+        &_text1
             @extend %text-circle
-            margin-left: 140px
-    &_img_line22
-        a
-            text-decoration: none
-        &_img_1
-            margin-left: 100px
-        &_text
-            @extend %text-circle
+            padding-right: 7px
+        &_img1
+            &:hover
+                @extend %hover-orange    
 .menu
     display: flex
     justify-content: space-between
@@ -180,13 +252,7 @@ footer
             font-size: 15px
             font-weight: 500
             margin-left: 20px
-.calc
-    .card
-        padding: 15px 15px 15px 5px
-    select
-        margin: 5px
-    .input-group
-        margin: 0px 5px 0px 5px
+
 .modal-footer
     .btn
         width: 120px

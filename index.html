@@ -380,25 +380,40 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h2>Калькулятор</h2>
-                        <form action="#">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                              </select>
-                            <div class="calc_row">
-                                <div class="mb-3">
-                                <label for="rub">RUB</label>
-                                <input id="rub" type="text">
+                        <div class="card" style="width: 18rem;">
+                            <form action="#">
+                                <select class="form-select" data-calc-obj>
+                                    <option selected>Выберите тип объекта</option>
+                                    <option value="1">Частный объект</option>
+                                    <option value="2">Коммерческий </option>
+                                </select>
+                                <select class="form-select" data-calc-material>
+                                    <option selected>Выберите тип материала</option>
+                                    <option value="1">Пеноплэкс Основа</option>
+                                    <option value="2">Пеноплэкс Комфорт</option>
+                                    <option value="3">Пеноплэкс Стена</option>
+                                    <option value="4">Пеноплэкс Фундамент</option>
+                                    <option value="5">Пеноплэкс Кровля</option>
+                                    <option value="6">Пеноплэкс ГЕО</option>
+                                </select>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">Площадь м²</span>
+                                    <input type="text" class="form-control" placeholder="120" aria-label="Username">
+                                  </div>
+                                <div class="calc_row">
+                                    <div class="mb-3">
+                                    <label for="rub">RUB</label>
+                                    <input id="rub" type="text">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="calc_row">
-                                <div class="mb-3">
-                                <label for="rub">USD</label>
-                                <input id="usd" type="text">
+                                <div class="calc_row">
+                                    <div class="mb-3">
+                                    <label for="rub">USD</label>
+                                    <input id="usd" type="text">
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
