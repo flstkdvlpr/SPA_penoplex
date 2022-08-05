@@ -73,9 +73,17 @@ window.addEventListener('DOMContentLoaded', ()=>{
         request.addEventListener('load', ()=>{
             if(request.status == 200){
                 const data = JSON.parse(request.response);
-                console.log(data.offers[0].price);
+                //console.log(data.offers[0].price);
+                data.offers.forEach(item =>{
+                    if(item.price){
+                        let list = item.price * item.value;
+                        console.log(list);
+                        inputUsd.value = list/item.list;
+                        
+                    } 
+                });
             }
-        })
-    })
+        });
+    });
 
 });

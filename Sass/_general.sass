@@ -21,14 +21,34 @@ nav
 
 
 .house
-    min-height: 600px
+    min-height: 650px
     background: url("/img/house2.3.jpg") center center/cover no-repeat
     .grid-container
         display: grid
         grid-template-columns: repeat(3, minmax(300px, 400px))
+    .grid-elem-1
+        margin-top: 90px
+        margin-left: 240px
+    .grid-elem-2
+        margin-left: 150px
+    .grid-elem-3
+        margin-right: 130px
+
     &_img_line1
         a
             text-decoration: none
+        &_img_1, &_img_2, &_img_3
+            margin-left: 10px
+
+        &_text
+            text-align: center
+            color: black
+            font-weight: 400
+            font-size: 18px
+            line-height: 17px
+            text-shadow: 1px 1px 2px rgb(0,0,0,0.4)
+            &:hover
+                cursor: pointer
 
 .menu
     display: flex
