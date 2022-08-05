@@ -41,15 +41,22 @@ nav
             margin-left: 10px
 
         &_text
-            text-align: center
-            color: black
-            font-weight: 400
-            font-size: 18px
-            line-height: 17px
-            text-shadow: 1px 1px 2px rgb(0,0,0,0.4)
-            &:hover
-                cursor: pointer
-
+            @extend %text-circle
+    &_img_line2
+        a
+            text-decoration: none
+        &_img_1
+            margin-left: 163px
+        &_text
+            @extend %text-circle
+            margin-left: 140px
+    &_img_line22
+        a
+            text-decoration: none
+        &_img_1
+            margin-left: 100px
+        &_text
+            @extend %text-circle
 .menu
     display: flex
     justify-content: space-between
