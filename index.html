@@ -382,7 +382,14 @@
                         <h2>Калькулятор</h2>
                         <div class="card" style="width: 18rem;">
                             <form action="#">
-                                <select class="form-select" data-calc-obj>
+                                <select class="form-select" data-calc-region>
+                                    <option selected>Выберите регион</option>
+                                    <option value="1">Ростовская область</option>
+                                    <option value="2">Краснодарский край</option>
+                                    <option value="3">Северный Кавказ</option>
+                                    <optыion value="4">Крым</optыion>
+                                </select>
+                                <select class="form-select" data-calc-object>
                                     <option selected>Выберите тип объекта</option>
                                     <option value="1">Частный объект</option>
                                     <option value="2">Коммерческий </option>
@@ -399,8 +406,9 @@
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1">Площадь м²</span>
                                     <input type="text" class="form-control" placeholder="120" aria-label="Username">
-                                  </div>
-                                <div class="calc_row">
+                                </div>
+                                <button type="button" class="btn btn-primary">Рассчёт</button>
+  <!--                               <div class="calc_row">
                                     <div class="mb-3">
                                     <label for="rub">RUB</label>
                                     <input id="rub" type="text">
@@ -410,7 +418,7 @@
                                     <div class="mb-3">
                                     <label for="rub">USD</label>
                                     <input id="usd" type="text">
-                                    </div>
+                                    </div> -->
                                 </div>
                             </form>
                         </div>
