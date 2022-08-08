@@ -1,17 +1,33 @@
-console.log('click');
+'use strict';
 
-const people = {
-    name: "John",
-    tel: '+7925485552',
-    parents: {
-        mom: 'Olga',
-        father: 'Andrew'
-    }
-};
+console.log('Запрос данных...');
 
-JSON.stringify(people);
-console.log(JSON.parse(JSON.stringify(people)));
+const prom = new Promise(function(resolve, reject){
+    setTimeout(() => {
+        console.log('Подготовка данных...');
+        const product = {name: "TV", price: "2000"};
 
-/* const clonePeople = JSON.parse(JSON.stringify(people));
-clonePeople.parents.mom = 'Lora';
-console.log(clonePeople); */
+        resolve(product);
+
+    }, 3000);
+});
+
+prom.then((product)=>{
+    return new Promise((resolve, reject) => {
+        setTimeout(()=>{
+            product.status = 'order';
+            resolve(product);
+            //reject();
+        }, 2000);
+
+    });
+}).then(product =>{
+    product.modify = true;
+    return product;
+}).then(product => {
+    console.log(product);
+}).catch(() => {
+    console.log('Произошла ошибка');
+}).finally(() =>{
+    console.log('finally');
+});
