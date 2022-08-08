@@ -1,33 +1,18 @@
-'use strict';
+const time = time =>{
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve();
+        }, time);
+    })
+}
 
-console.log('Запрос данных...');
+//time(1000).then(() => console.log('1000 ms'));
+//time(2000).then(() => console.log('2000 ms'));
 
-const prom = new Promise(function(resolve, reject){
-    setTimeout(() => {
-        console.log('Подготовка данных...');
-        const product = {name: "TV", price: "2000"};
-
-        resolve(product);
-
-    }, 3000);
-});
-
-prom.then((product)=>{
-    return new Promise((resolve, reject) => {
-        setTimeout(()=>{
-            product.status = 'order';
-            resolve(product);
-            //reject();
-        }, 2000);
-
-    });
-}).then(product =>{
-    product.modify = true;
-    return product;
-}).then(product => {
-    console.log(product);
-}).catch(() => {
-    console.log('Произошла ошибка');
+Promise.all([time(1000), time(2000)]).then(() =>{
+    console.log('Good')
+}).catch(() =>{
+    console.error('Jib,rf');
 }).finally(() =>{
-    console.log('finally');
+
 });
