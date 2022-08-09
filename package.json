@@ -1,0 +1,21 @@
+{
+  "name": "lpstsystem",
+  "version": "1.0.0",
+  "description": "\"Стартовый проект с топовыми товарами и готовыми решениями\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/flstkdvlpr/frstrp"
+  },
+  "keywords": [
+    "St-system"
+  ],
+  "author": "Savinykh Artem",
+  "license": "ISC",
+  "devDependencies": {
+    "json-server": "^0.17.0"
+  }
+}

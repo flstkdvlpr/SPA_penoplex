@@ -9,7 +9,8 @@ console.log(shortNames);
 //map
 const people = ['ANNa', 'GeORg', 'IvaAn', 'Artem', 'Voldemar'];
 const normPeople = people.map(item => item.toLowerCase());
-console.log(normPeople);
+const normPeople2 =  normPeople.map(item => item[0].toUpperCase);
+console.log(normPeople2);
 
 // some/ever
 
@@ -30,3 +31,20 @@ console.log(res);
 const allNames = ['Anna', 'Geror', 'Ivan', 'Artem', 'Voldemar'];
 const stringOfNames = allNames.reduce((names, data) => `${names}, ${data}`);
 console.log(stringOfNames);
+
+//Итого. Вытащить из объекта всех людей
+
+const obj = {
+    ivan: 'people',
+    anna: 'people',
+    dog: 'animal',
+    oleg: 'people',
+    cat: 'animal'
+}
+
+const newArr = Object.entries(obj)
+.filter(item => item[1] === 'people')
+.map(item => item[0])
+.reduce((names, data) => `${names}, ${data}`);
+
+console.log(newArr);
