@@ -9,8 +9,7 @@ console.log(shortNames);
 //map
 const people = ['ANNa', 'GeORg', 'IvaAn', 'Artem', 'Voldemar'];
 const normPeople = people.map(item => item.toLowerCase());
-const normPeople2 =  normPeople.map(item => item[0].toUpperCase);
-console.log(normPeople2);
+console.log(normPeople);
 
 // some/ever
 
