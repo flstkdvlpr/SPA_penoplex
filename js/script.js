@@ -65,7 +65,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
         });
     }); */
 
-    inputRub.addEventListener('input', ()=>{
+    /* inputRub.addEventListener('input', ()=>{
         const request = new XMLHttpRequest();
         request.open('GET', 'js/price.json');
         request.setRequestHeader('Content-type', 'application/json; charset=utf-8' );
@@ -84,6 +84,17 @@ window.addEventListener('DOMContentLoaded', ()=>{
                 });
             }
         });
-    });
+    }); */
+
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: "POST",
+        body: JSON.stringify({name: "Alex"}),
+        headers: {
+            "Content-type": "application/json"
+        }
+    })
+    .then(response => response.json())
+    .then(json => console.log(json));
+  
 
 });

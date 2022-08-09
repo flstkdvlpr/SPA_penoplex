@@ -1,18 +1,12 @@
-const time = time =>{
-    return new Promise(resolve => {
+function delay(ms) {
+    return new Promise(function(resolve, reject){
         setTimeout(() => {
-            resolve();
-        }, time);
-    })
-}
+        resolve();
+        }, ms);
+    });
+    
+  }
 
-//time(1000).then(() => console.log('1000 ms'));
-//time(2000).then(() => console.log('2000 ms'));
+  delay(3000).then(() => console.log('выполнилось через 3 секунды'));
 
-Promise.all([time(1000), time(2000)]).then(() =>{
-    console.log('Good')
-}).catch(() =>{
-    console.error('Jib,rf');
-}).finally(() =>{
 
-});
