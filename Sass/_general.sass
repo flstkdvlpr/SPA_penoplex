@@ -25,10 +25,28 @@ nav
     background: url("/img/house2.3.jpg") center center/cover no-repeat
     .grid-container
         display: grid
-        justify-items: center
-        align-items: center
         gap: 10px
         grid-template-columns: repeat(3, minmax(300px, 400px))
+        a
+            text-decoration: none
+            color: black
+        img
+            &:hover
+                @extend %hover-orange
+        .house_img_text
+            @extend %text-circle   
+        .grid-elem-2
+            margin-left: 180px
+            text-align: center
+        .grid-elem-3
+            margin-right: 40px
+            text-align: center
+        .grid-elem-4
+            margin-left: 300px
+            text-align: center
+        .grid-elem-6
+            margin-left: 60px
+            text-align: center
 
 .menu
     display: flex
