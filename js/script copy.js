@@ -93,8 +93,8 @@ window.addEventListener('DOMContentLoaded', ()=>{
             this.text5 = text5;
             this.text6 = text6;
             this.text7 = text7;
-            this.classes = classes;
             this.parent = document.querySelector(parentSelector);
+            this.classes = classes;
         }
 
         render(){
@@ -233,5 +233,35 @@ window.addEventListener('DOMContentLoaded', ()=>{
     })
     .then(response => response.json())
     .then(json => console.log(json));
+
+
+        /* const getResource = async (url) => {
+        const res = await fetch(url);
+
+        if(!res.ok) {
+            throw new Error(`Cold no fetch ${url}, status: ${res.status}`);
+        }
+
+        return await res.json();
+    } */
+
+    class PriceItems{
+        constructor(price, parentSelector, ...classes){
+            this.price = price;
+            this.parent = document.querySelectorAll(parentSelector);
+            this.classes = classes;
+        }
+
+        render(){
+            const element = document.createElement('div');
+            this.classes.forEach(className => element.classList.add(className));
+            element.innerHTML = `
+            <div class="card-price">${this.price}</div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Купить</button>
+            `;
+            this.parent.append(element);
+
+        }
+    }
 
 });

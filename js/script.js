@@ -3,8 +3,11 @@ window.addEventListener('DOMContentLoaded', ()=>{
     const house = document.querySelector('.house'),
         card = document.querySelectorAll('.card'),
         modal = document.querySelector('.modal'),
-        cardOrders = document.querySelectorAll('.card-orders');
+        cardOrders = document.querySelectorAll('.card-orders'),
+        cardChar = document.querySelectorAll('.card-char-1');
 
+
+    addPrice();
 
     function hideAllItems(){
         card.forEach(item =>{
@@ -35,10 +38,56 @@ window.addEventListener('DOMContentLoaded', ()=>{
                 console.log(item.childNodes[3]);
             }
         });
-    }); 
+    });
+    
+    class PriceItems{
+        constructor(price, parentSelector, ...classes){
+            this.price = price;
+            this.parent = document.querySelectorAll(parentSelector);
+            this.classes = classes;
+        }
+
+        render(){
+            const element = document.createElement('div');
+            this.classes.forEach(className => element.classList.add(className));
+            element.innerHTML = `
+            <div class="card-price">${this.price}</div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Купить</button>
+            `;
+            this.parent.append(element);
+
+        }
+    }
+
+    
+    function addPrice(){
+        cardChar.forEach(item =>{
+        return item + new PriceItems(
+                "1",
+                '7',
+                "7"
+            ).render();
+        })
+    }
+
+
+
+
 
     fetch('http://localhost:3000/offers')
     .then(data => data.json())
     .then(res => console.log(res));
+
+    /* const getResource = async (url) => {
+        const res = await fetch(url);
+
+        if(!res.ok) {
+            throw new Error(`Cold no fetch ${url}, status: ${res.status}`);
+        }
+
+        return await res.json();
+    } */
+
+    
   
 });
