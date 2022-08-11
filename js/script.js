@@ -37,9 +37,8 @@ window.addEventListener('DOMContentLoaded', ()=>{
         });
     }); 
 
-    fetch('js/price.json')
+    fetch('http://localhost:3000/offers')
     .then(data => data.json())
-    .then(res => console.log(res))
+    .then(res => console.log(res));
   
-
 });
