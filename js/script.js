@@ -74,7 +74,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
 
 
-    fetch('http://localhost:3000/offers')
+    fetch('')
     .then(data => data.json())
     .then(res => console.log(res));
 
@@ -87,29 +87,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
         return await res.json();
     } */
-
-    const checkbox = document.querySelector('#checkbox');
-    const fordocumentms = document.querySelector('form');
-    const change = document.querySelector('#color');
-
     
-    if (localStorage.getItem('isChecked')){
-        checkbox.checked = true;
-    }
 
-    checkbox.addEventListener('change', ()=>{
-    localStorage.setItem('isChecked', true);
-
-    });
-
-    change.addEventListener('click', () =>{
-        if (localStorage.getItem('bg') === 'changed'){
-            form.style.backgroundcolor = '#fff';
-        } else {
-            localStorage.setItem('bg', 'chnged');
-            form.style.backgroundcolor = red;
-        }
-    });
-    
   
 });

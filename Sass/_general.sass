@@ -21,12 +21,13 @@ nav
 
 
 .house-pc
-    min-height: 650px
+    min-height: 740px
     background: url("/img/house2.3.jpg") center center/cover no-repeat
     .grid-container
         display: grid
         gap: 10px
         grid-template-columns: repeat(3, minmax(300px, 400px))
+        grid-template-rows: auto
         a
             text-decoration: none
             color: black
@@ -36,17 +37,36 @@ nav
         .house_img_text
             @extend %text-circle   
         .grid-elem-2
-            margin-left: 180px
+            margin-top: 20px
+            margin-left: 200px
             text-align: center
         .grid-elem-3
-            margin-right: 40px
+            margin-top: 20px
+            margin-left: 50px
             text-align: center
         .grid-elem-4
-            margin-left: 300px
+            margin-left: 249px
             text-align: center
         .grid-elem-6
-            margin-left: 60px
+            margin-top: 30px
+            margin-left: 154px
             text-align: center
+        .grid-elem-7
+            display: flex
+            margin-left: 94px
+            text-align: center
+            &-1
+                margin-top: 60px
+            &-2
+                margin-left: 50px
+        .grid-elem-9
+            margin-left: 220px
+            text-align: center
+        .grid-elem-10
+            margin-top: 20px
+            margin-right: 140px
+            text-align: center
+
 
 .menu
     display: flex
@@ -178,7 +198,6 @@ footer
         margin: 10px 5px 0 5px
     .input-group
         margin: 10px 5px 5px 5px
-    .btn
         
     
 .modal-footer
