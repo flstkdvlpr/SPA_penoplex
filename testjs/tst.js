@@ -1,14 +1,31 @@
-function countPositivesSumNegatives(input) {
-    let positive = 0;
-    let negative = 0;
-    let result = [0];
-    
-    if(input.length = 0 || input.length == null){
-      return result;
-    } 
-  
-  }
+'use strict';
 
-  let arr = [];
+const shops = [
+  {rise: 500},
+  {oli: 300},
+  {bread: 2}
+];
 
-  console.log(countPositivesSumNegatives(arr));
+
+const map = new Map();
+
+//set
+const budget = [3500, 4500, 50];
+shops.forEach((shop, i) =>{ // тоже самое map.set(shops[0], 5000).set(shops[1], 250).set(shops[4], 100);
+  map.set(shop, budget[i]);
+});
+console.log(map);
+
+//get
+
+console.log(map.get(shops[0]));
+
+//map.has(), map.delete(key); map.clear();map.size.
+
+//map.keys();
+
+for (let shop in map.keys()){
+  console.log(shop);
+}
+
+

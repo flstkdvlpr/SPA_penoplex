@@ -4,10 +4,20 @@ window.addEventListener('DOMContentLoaded', ()=>{
         card = document.querySelectorAll('.card'),
         modal = document.querySelector('.modal'),
         cardOrders = document.querySelectorAll('.card-orders'),
+        dataCircle = document.querySelectorAll('[data-circle]'),
         cardChar = document.querySelectorAll('.card-char-1');
 
+        console.log(dataCircle[1].innerText);
 
-    addPrice();
+
+        dataCircle.forEach(item =>{
+            item.addEventListener('click', (e)=>{
+                if(e.target){
+                    hideAllItems();
+                }
+            })
+        });
+
 
     function hideAllItems(){
         card.forEach(item =>{
@@ -40,54 +50,16 @@ window.addEventListener('DOMContentLoaded', ()=>{
         });
     });
     
-    class PriceItems{
-        constructor(price, parentSelector, ...classes){
-            this.price = price;
-            this.parent = document.querySelectorAll(parentSelector);
-            this.classes = classes;
-        }
-
-        render(){
-            const element = document.createElement('div');
-            this.classes.forEach(className => element.classList.add(className));
-            element.innerHTML = `
-            <div class="card-price">${this.price}</div>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Купить</button>
-            `;
-            this.parent.append(element);
-
-        }
-    }
-
-    
-    function addPrice(){
-        cardChar.forEach(item =>{
-        return item + new PriceItems(
-                "1",
-                '7',
-                "7"
-            ).render();
-        });
-    }
 
 
 
-
-
-    fetch('')
+/* 
+    fetch('http://localhost:3000/offers')
     .then(data => data.json())
-    .then(res => console.log(res));
+    .then(res => console.log(res)); */
 
-    /* const getResource = async (url) => {
-        const res = await fetch(url);
 
-        if(!res.ok) {
-            throw new Error(`Cold no fetch ${url}, status: ${res.status}`);
-        }
 
-        return await res.json();
-    } */
     
-
   
 });
