@@ -1,37 +1,25 @@
 window.addEventListener('DOMContentLoaded', ()=>{
 
-    const house = document.querySelector('.house'),
-        card = document.querySelectorAll('.card'),
-        modal = document.querySelector('.modal'),
-        cardOrders = document.querySelectorAll('.card-orders'),
-        dataCircle = document.querySelectorAll('[data-circle]'),
-        cardChar = document.querySelectorAll('.card-char-1');
+    const housePc = document.querySelector('.house-pc'),
+        card = document.querySelectorAll('.card-1'),
+        dataCircle = document.querySelectorAll('[data-circle]');
 
-        console.log(dataCircle[1].innerText);
-
-
-        dataCircle.forEach(item =>{
-            item.addEventListener('click', (e)=>{
-                if(e.target){
-                    hideAllItems();
-                }
-            })
-        });
+        console.log(card);
+        //console.log(dataos);
+        console.log(dataCircle[1].dataset.value);
 
 
-    function hideAllItems(){
-        card.forEach(item =>{
-            item.classList.add('hide');
-        });
-    }
+        function hideAll(){
+            card.forEach(item => {
+                item.classList.add('hide')
+            });
+        }
 
-    //hideAllItems();
 
     card.forEach(item =>{
         item.addEventListener('click', (e)=>{
             e.preventDefault();
             if(e.target && e.target.dataset.value == 'speclink'){
-                console.log(item.childNodes.childNodes);
                 item.childNodes[3].classList.remove('hide');
                 item.childNodes[1].classList.add('hide');
 
