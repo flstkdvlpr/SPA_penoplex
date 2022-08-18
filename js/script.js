@@ -6,14 +6,27 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
         console.log(card);
         //console.log(dataos);
-        console.log(dataCircle[1].dataset.value);
-
 
         function hideAll(){
             card.forEach(item => {
-                item.classList.add('hide')
+                item.classList.add('hide');
             });
         }
+
+        function showAll(){
+            card.forEach(item => {
+                item.classList.remove('hide');
+            });
+        }
+
+housePc.addEventListener('click', (e)=>{
+    if(e.target && e.target.closest(".grid-elem-2")){
+        showAll();
+        document.querySelector('#data-km').style.display = 'block';
+        document.querySelector('#data-os').style.display = 'block';
+        hideAll();
+    }
+});
 
 
     card.forEach(item =>{
@@ -33,7 +46,6 @@ window.addEventListener('DOMContentLoaded', ()=>{
             if(e.target && e.target.dataset.value == 'specendlink'){
                 item.childNodes[1].classList.remove('hide');
                 item.childNodes[3].classList.add('hide');
-                console.log(item.childNodes[3]);
             }
         });
     });
