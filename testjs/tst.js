@@ -1,31 +1,23 @@
-'use strict';
+const arr = [1, 3, 4, 55, 6, 7, 38, 9];
 
-const shops = [
-  {rise: 500},
-  {oli: 300},
-  {bread: 2}
-];
-
-
-const map = new Map();
-
-//set
-const budget = [3500, 4500, 50];
-shops.forEach((shop, i) =>{ // тоже самое map.set(shops[0], 5000).set(shops[1], 250).set(shops[4], 100);
-  map.set(shop, budget[i]);
-});
-console.log(map);
-
-//get
-
-console.log(map.get(shops[0]));
-
-//map.has(), map.delete(key); map.clear();map.size.
-
-//map.keys();
-
-for (let shop in map.keys()){
-  console.log(shop);
+function search(arr, item){
+  arr.sort((a,b)=>a - b);
+  let start = 0;
+  let end = arr.length - 1;
+  let mid;
+  while(start <= end){
+    mid = Math.round((end - start)/2) + start;
+    if (item == arr[mid]){
+      return mid;
+    } else if (item < arr[mid]){
+      end = mid - 1;
+    } else {
+      start = mid + 1;
+    }
+  }
+   return -1;
 }
 
+
+console.log(search(arr, 55));
 
