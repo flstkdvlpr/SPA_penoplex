@@ -99,5 +99,28 @@
                     display: none
                 &:nth-child(3)
                     transform: rotate(45deg)
-             
+@media (max-width: 767px)
+    h1, h2
+        width: auto    
+@media (max-width: 425px)  
+    .house-mobile
+        .grid-container
+            .house_img_text
+                font-size: 13px
+@media (max-width: 375px)
+    .house-mobile
+        .grid-container
+            grid-template-columns: repeat(4, minmax(86px, 90px))
+            img
+                width: 85px
+                height: 85px
+            .grid-elem-2
+                margin-left: 0
+@media (max-width: 375px)
+    .house-mobile
+        .grid-container
+            img
+                width: 65px
+                height: 65px
+
             
