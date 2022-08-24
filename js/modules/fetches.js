@@ -5,4 +5,4 @@ function fetches(){
 }
 
 
-module.exports = fetches;
+export default fetches;

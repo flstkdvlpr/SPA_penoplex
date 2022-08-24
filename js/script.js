@@ -1,13 +1,12 @@
+import circles from './modules/circles';
+import charracters from './modules/char';
+import fetches from './modules/fetches';
+import hamburger from './modules/hamburger';
+
+
 window.addEventListener('DOMContentLoaded', ()=>{
-
-const charracters = require('./modules/char'),
-      fetches =  require('./modules/fetches'),
-      hamburger =  require('./modules/hamburger'),
-      circles = require('./modules/circles');
-
       charracters();
       fetches();
       hamburger();
       circles();
-  
 });

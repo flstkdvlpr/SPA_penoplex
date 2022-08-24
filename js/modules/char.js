@@ -1,18 +1,6 @@
 function char(){
-    card = document.querySelectorAll('.card-1');
 
-    function hideAll(){
-        card.forEach(item => {
-            item.closest(".col").style.display = 'none';
-        });
-    }
-
-    function showAll(){
-        card.forEach(item => {
-            item.closest(".col").style.display = 'block';
-        });
-    }
-
+    const card = document.querySelectorAll('.card-1');
     card.forEach(item =>{
         item.addEventListener('click', (e)=>{
             e.preventDefault();
@@ -35,4 +23,4 @@ function char(){
     });
 }
 
-module.exports = char;
+export default char;

@@ -2,6 +2,18 @@ function circles(){
 
     const housePc = document.querySelector('.house-pc'),
         houseMob = document.querySelector('.house-mobile');
+    
+        function hideAll(){
+            card.forEach(item => {
+                item.closest(".col").style.display = 'none';
+            });
+        }
+    
+        function showAll(){
+            card.forEach(item => {
+                item.closest(".col").style.display = 'block';
+            });
+        }
 
     housePc.addEventListener('click', (e)=>{
         if(e.target && (e.target.closest(".grid-elem-2") || e.target.closest(".grid-elem-6"))){
@@ -86,4 +98,4 @@ function circles(){
     });
 }
 
-module.exports = circles;
+export default circles;

@@ -16,4 +16,4 @@ function hamburger(){
     });
 }
 
-module.exports = hamburger;
+export default hamburger;
