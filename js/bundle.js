@@ -35,38 +35,23 @@ function char(){
             }
         });
     });
-}
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (char);
+    function hideAll(){
+        card.forEach(item => {
+            item.closest(".col").style.display = 'none';
+        });
+    }
 
-/***/ }),
-
-/***/ "./js/modules/circles.js":
-/*!*******************************!*\
-  !*** ./js/modules/circles.js ***!
-  \*******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-function circles(){
+    function showAll(){
+        card.forEach(item => {
+            item.closest(".col").style.display = 'block';
+        });
+    }
 
     const housePc = document.querySelector('.house-pc'),
         houseMob = document.querySelector('.house-mobile');
     
-        function hideAll(){
-            card.forEach(item => {
-                item.closest(".col").style.display = 'none';
-            });
-        }
     
-        function showAll(){
-            card.forEach(item => {
-                item.closest(".col").style.display = 'block';
-            });
-        }
 
     housePc.addEventListener('click', (e)=>{
         if(e.target && (e.target.closest(".grid-elem-2") || e.target.closest(".grid-elem-6"))){
@@ -151,7 +136,7 @@ function circles(){
     });
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (circles);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (char);
 
 /***/ }),
 
@@ -271,21 +256,19 @@ var __webpack_exports__ = {};
   !*** ./js/script.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_circles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/circles */ "./js/modules/circles.js");
-/* harmony import */ var _modules_char__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/char */ "./js/modules/char.js");
-/* harmony import */ var _modules_fetches__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/fetches */ "./js/modules/fetches.js");
-/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/hamburger */ "./js/modules/hamburger.js");
-
+/* harmony import */ var _modules_char__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/char */ "./js/modules/char.js");
+/* harmony import */ var _modules_fetches__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/fetches */ "./js/modules/fetches.js");
+/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/hamburger */ "./js/modules/hamburger.js");
 
 
 
 
 
 window.addEventListener('DOMContentLoaded', ()=>{
-      (0,_modules_char__WEBPACK_IMPORTED_MODULE_1__["default"])();
-      (0,_modules_fetches__WEBPACK_IMPORTED_MODULE_2__["default"])();
-      (0,_modules_hamburger__WEBPACK_IMPORTED_MODULE_3__["default"])();
-      (0,_modules_circles__WEBPACK_IMPORTED_MODULE_0__["default"])();
+      (0,_modules_char__WEBPACK_IMPORTED_MODULE_0__["default"])();
+      (0,_modules_fetches__WEBPACK_IMPORTED_MODULE_1__["default"])();
+      (0,_modules_hamburger__WEBPACK_IMPORTED_MODULE_2__["default"])();
+      circles();
 });
 })();
 
