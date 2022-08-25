@@ -1,3 +1,7 @@
-let string = "an apple a day keeps the doctor away";
+function digitize(n) {
+  return String(n).split('').map(Number).reverse();
 
-console.log(string[0].toUpperCase);
+}
+
+
+console.log(digitize(5854885));
