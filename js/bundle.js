@@ -93,50 +93,76 @@ function char(){
         
         
     });
-    
-    houseMob.addEventListener('click', (e)=>{
-        if(e.target && (e.target.closest(".grid-elem-2") || e.target.closest(".grid-elem-6"))){
-            hideAll();
-            document.querySelector('#data-km').closest(".col").style.display = 'block';
-            document.querySelector('#data-os').closest(".col").style.display = 'block';
-            document.querySelector('#data-gl').closest(".col").style.display = 'block';
-        }
-        if(e.target && e.target.closest(".grid-elem-3")){
-            showAll();
-            hideAll();
-            document.querySelector('#data-rf').closest(".col").style.display = 'block';
-            document.querySelector('#data-gl').closest(".col").style.display = 'block';
-        }
-    
-        if(e.target && (e.target.closest(".grid-elem-4") || e.target.closest(".grid-elem-7-2") )){
-            showAll();
-            hideAll();
-            document.querySelector('#data-km').closest(".col").style.display = 'block';
-            document.querySelector('#data-os').closest(".col").style.display = 'block';
-            document.querySelector('#data-wl').closest(".col").style.display = 'block';
-            document.querySelector('#data-gl').closest(".col").style.display = 'block';
-        }
+
+    try{
+        houseMob.addEventListener('click', (e)=>{
+            if(e.target && (e.target.closest(".grid-elem-2") || e.target.closest(".grid-elem-6"))){
+                hideAll();
+                document.querySelector('#data-km').closest(".col").style.display = 'block';
+                document.querySelector('#data-os').closest(".col").style.display = 'block';
+                document.querySelector('#data-gl').closest(".col").style.display = 'block';
+            }
+            if(e.target && e.target.closest(".grid-elem-3")){
+                showAll();
+                hideAll();
+                document.querySelector('#data-rf').closest(".col").style.display = 'block';
+                document.querySelector('#data-gl').closest(".col").style.display = 'block';
+            }
         
-        if(e.target && (e.target.closest(".grid-elem-9") || e.target.closest(".grid-elem-7-1") )){
-            showAll();
-            hideAll();
-            document.querySelector('#data-fn').closest(".col").style.display = 'block';
-            document.querySelector('#data-ge').closest(".col").style.display = 'block';
-            document.querySelector('#data-gl').closest(".col").style.display = 'block';
-        }
-    
-        if(e.target && e.target.closest(".grid-elem-10")){
-            showAll();
-            hideAll();
-            document.querySelector('#data-eko').closest(".col").style.display = 'block';
-        }
-    
+            if(e.target && (e.target.closest(".grid-elem-4") || e.target.closest(".grid-elem-7-2") )){
+                showAll();
+                hideAll();
+                document.querySelector('#data-km').closest(".col").style.display = 'block';
+                document.querySelector('#data-os').closest(".col").style.display = 'block';
+                document.querySelector('#data-wl').closest(".col").style.display = 'block';
+                document.querySelector('#data-gl').closest(".col").style.display = 'block';
+            }
+            
+            if(e.target && (e.target.closest(".grid-elem-9") || e.target.closest(".grid-elem-7-1") )){
+                showAll();
+                hideAll();
+                document.querySelector('#data-fn').closest(".col").style.display = 'block';
+                document.querySelector('#data-ge').closest(".col").style.display = 'block';
+                document.querySelector('#data-gl').closest(".col").style.display = 'block';
+            }
         
+            if(e.target && e.target.closest(".grid-elem-10")){
+                showAll();
+                hideAll();
+                document.querySelector('#data-eko').closest(".col").style.display = 'block';
+            } 
+        });
+    } catch(error){
+        console.log(error.message);
+    }
+
         
-    });
+    
+    
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (char);
+
+/***/ }),
+
+/***/ "./js/modules/fetches.js":
+/*!*******************************!*\
+  !*** ./js/modules/fetches.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function fetches(){
+    fetch('http://localhost:3000/offerss')
+    .then(data => data.json())
+    .then(res => console.log(res));
+}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (fetches);
 
 /***/ }),
 
@@ -236,16 +262,17 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_char__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/char */ "./js/modules/char.js");
-/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/hamburger */ "./js/modules/hamburger.js");
+/* harmony import */ var _modules_fetches__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/fetches */ "./js/modules/fetches.js");
+/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/hamburger */ "./js/modules/hamburger.js");
 
-//import fetches from './modules/fetches';
+
 
 
 
 window.addEventListener('DOMContentLoaded', ()=>{
       (0,_modules_char__WEBPACK_IMPORTED_MODULE_0__["default"])();
-      //fetches();
-      (0,_modules_hamburger__WEBPACK_IMPORTED_MODULE_1__["default"])();
+      (0,_modules_fetches__WEBPACK_IMPORTED_MODULE_1__["default"])();
+      (0,_modules_hamburger__WEBPACK_IMPORTED_MODULE_2__["default"])();
 });
 })();
 
