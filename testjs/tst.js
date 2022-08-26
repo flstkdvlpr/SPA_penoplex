@@ -1,7 +1,4 @@
-function digitize(n) {
-  return String(n).split('').map(Number).reverse();
+document.querySelector('.button').addEventListener('click', () =>{
+    document.querySelector('.text').classList.add('animate__animated', 'animate__bounce');
+});
 
-}
-
-
-console.log(digitize(5854885));

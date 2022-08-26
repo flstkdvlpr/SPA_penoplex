@@ -24,6 +24,7 @@ function char(){
 
     function hideAll(){
         card.forEach(item => {
+            item.classList.add('animate__animated', 'animate__bounce');
             item.closest(".col").style.display = 'none';
         });
     }
@@ -41,20 +42,19 @@ function char(){
 
     housePc.addEventListener('click', (e)=>{
         if(e.target && (e.target.closest(".grid-elem-2") || e.target.closest(".grid-elem-6"))){
+            document.querySelector(".grid-elem-2").classList.add('.animate__animated');
             hideAll();
             document.querySelector('#data-km').closest(".col").style.display = 'block';
             document.querySelector('#data-os').closest(".col").style.display = 'block';
             document.querySelector('#data-gl').closest(".col").style.display = 'block';
         }
         if(e.target && e.target.closest(".grid-elem-3")){
-            showAll();
             hideAll();
             document.querySelector('#data-rf').closest(".col").style.display = 'block';
             document.querySelector('#data-gl').closest(".col").style.display = 'block';
         }
     
         if(e.target && (e.target.closest(".grid-elem-4") || e.target.closest(".grid-elem-7-2") )){
-            showAll();
             hideAll();
             document.querySelector('#data-km').closest(".col").style.display = 'block';
             document.querySelector('#data-os').closest(".col").style.display = 'block';
