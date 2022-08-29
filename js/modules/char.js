@@ -37,6 +37,13 @@ function char(){
 
     const housePc = document.querySelector('.house-pc'),
         houseMob = document.querySelector('.house-mobile');
+
+
+    function showActiveItem(...selector){
+        selector.forEach(item =>{
+            document.querySelector(item).closest(".col").style.display = 'block';
+        });
+    }
     
     
 
@@ -44,30 +51,22 @@ function char(){
         if(e.target && (e.target.closest(".grid-elem-2") || e.target.closest(".grid-elem-6"))){
             document.querySelector(".grid-elem-2").classList.add('.animate__animated');
             hideAll();
-            document.querySelector('#data-km').closest(".col").style.display = 'block';
-            document.querySelector('#data-os').closest(".col").style.display = 'block';
-            document.querySelector('#data-gl').closest(".col").style.display = 'block';
+            showActiveItem('#data-os', '#data-km', '#data-gl');
         }
         if(e.target && e.target.closest(".grid-elem-3")){
             hideAll();
-            document.querySelector('#data-rf').closest(".col").style.display = 'block';
-            document.querySelector('#data-gl').closest(".col").style.display = 'block';
+            showActiveItem('#data-rf','#data-gl');
         }
     
         if(e.target && (e.target.closest(".grid-elem-4") || e.target.closest(".grid-elem-7-2") )){
             hideAll();
-            document.querySelector('#data-km').closest(".col").style.display = 'block';
-            document.querySelector('#data-os').closest(".col").style.display = 'block';
-            document.querySelector('#data-wl').closest(".col").style.display = 'block';
-            document.querySelector('#data-gl').closest(".col").style.display = 'block';
+            showActiveItem('#data-km', '#data-os', '#data-wl', '#data-gl');
         }
         
         if(e.target && (e.target.closest(".grid-elem-9") || e.target.closest(".grid-elem-7-1") )){
             showAll();
             hideAll();
-            document.querySelector('#data-fn').closest(".col").style.display = 'block';
-            document.querySelector('#data-ge').closest(".col").style.display = 'block';
-            document.querySelector('#data-gl').closest(".col").style.display = 'block';
+            showActiveItem('#data-fn', '#data-ge', '#data-gl');
         }
     
         if(e.target && e.target.closest(".grid-elem-10")){
