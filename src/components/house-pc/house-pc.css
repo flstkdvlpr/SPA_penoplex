@@ -38,7 +38,7 @@ h1 a{
     color: black;
 }
 
-img:hover{
+.house-pc img:hover{
     cursor: pointer;
     background-color: rgb(255,0, 0, 0.1);
     border-radius: 100%;

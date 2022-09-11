@@ -8,7 +8,7 @@ const Header = () =>{
         <header>
             <HeadeNav />
             <Hamburger />
-            <HousePC />
+
         </header>
     )
 }
