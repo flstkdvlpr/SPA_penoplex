@@ -2,7 +2,7 @@ import './hamburger.css';
 
 const Hamburger = () => {
     return (
-    <div class="hamburger">
+    <div className="hamburger">
         <span></span>
         <span></span>
         <span></span>

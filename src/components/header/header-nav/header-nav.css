@@ -22,3 +22,30 @@
 .menu_item {
     padding-right: 28px;
 }
+
+@media (max-width: 767px){
+    .menu{
+        position: fixed;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100vh;
+        padding: 20px 15px;
+        background-color: rgb(0, 0, 0, 0.8);
+        transition: 0.6s all;
+    }
+    .menu_active{
+        left: 0%;
+    }
+    .menu_item{
+        padding-right: 0;
+        border: none;
+        margin: 10px 0;
+    }
+    .menu_link{
+        font-size: 20px;
+    }
+}
