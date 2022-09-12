@@ -6,12 +6,6 @@ const { Component } = require("react");
 class CatalogItem extends Component{
     render(){
         return(
-            <section className="catalog">
-            <div className="container">
-                <div className="row">
-                    <div>
-                    <h2 className ='hcatalog'><a name="catalog">Каталог</a></h2>
-                    </div>
                     <div className="col">       
                         <div className="card card-1" id ="data-os">
                             <div className="card-side-1">
@@ -50,9 +44,6 @@ class CatalogItem extends Component{
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
         )
     }
 }
